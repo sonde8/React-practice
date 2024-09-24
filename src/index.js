@@ -5,7 +5,9 @@ import './index.css';
 
 // import App from './example/Ex04_p'
 
-import App from './example/CelebCard'
+// import App from './example/CelebCard'
+
+import App from './example/Binding'
 
 
 import reportWebVitals from './reportWebVitals';
