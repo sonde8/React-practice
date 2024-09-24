@@ -10,6 +10,7 @@ const CelebCard = () => {
 
   return (
     <div>
+      {/* map함수로 프롭스로 CelebInfo에 값을 전달하고 반복시킨다 */}
       {data.result.map(item => <CelebInfo key={item.title} item={item}></CelebInfo>)}
     </div>
   )
