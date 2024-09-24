@@ -5,7 +5,7 @@ const CelebInfo = ({item}) => {
   return (
     <div>
       <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={item.imgSrc} />
+        <Card.Img variant="top" src={item.imgSrc} height='350px'/>
         <Card.Body>
           <Card.Title>{item.title}</Card.Title>
           <Card.Text>
