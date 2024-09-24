@@ -7,8 +7,9 @@ import './index.css';
 
 // import App from './example/CelebCard'
 
-import App from './example/Binding'
+// import App from './example/Binding'
 
+import App from './example/Context'
 
 import reportWebVitals from './reportWebVitals';
 
