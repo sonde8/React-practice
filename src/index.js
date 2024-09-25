@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
 
-// import App from './example/Ex04_p'
+import App from './example/Ex04_p'
 
 // import App from './example/CelebCard'
 
@@ -11,7 +11,7 @@ import './index.css';
 
 // import App from './example/Context'
 
-import App from './example/DarkMode'
+// import App from './example/DarkMode'
 
 
 

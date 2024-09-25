@@ -23,19 +23,37 @@ const Ex04_p = () => {
   const [myDice, setMyDice] = useState(1)
   const [comDice, setComDice] = useState(1)
 
-  const makeRandom = () => {
-  }
+  const [result, setResult] = useState('시작 전')
+
+  const [round, setRound] = useState(1)
+  // myDice나 comDice로 변화를 감지할 경우, 적은 확률이지만 두 개 다 두 판 다 같은 값이 나올 수도 있음
+  // 그럴 때는 감지X
 
   const throwDice = () => {
     setMyDice(parseInt(Math.random()*6)+1)
     setComDice(parseInt(Math.random()*6)+1)
+    setRound(round+1)
   }
 
   const resetDice = () => {
     setMyDice(1)
     setComDice(1)
+    setRound(1)
   }
-  console.log(myDice);
+  
+
+  useEffect(()=>{
+    console.log(round);
+    if(round > 1){
+      if(myDice > comDice){
+        setResult('승리')
+      } else if (myDice < comDice){
+        setResult('패배')
+      } else {
+        setResult('무승부')
+      }
+    }
+  }, [round])
   
   return (
     <div className='box'>
@@ -51,13 +69,14 @@ const Ex04_p = () => {
         <Board comDice = {comDice} name = '컴퓨터'/>
       </div>
 
-
-      <h2>
+      {/* useEffect 배우기 이전 코드 */}
+      {/* <h2>
         {myDice > comDice
         ? <p>승리</p>
         : <p>패배</p>
       }
-      </h2>
+      </h2> */}
+      <h2>{result}</h2>
 
     </div>
   )
