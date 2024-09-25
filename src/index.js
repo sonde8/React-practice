@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
 
-import App from './example/Ex04_p'
+// import App from './example/Ex04_p'
 
 // import App from './example/CelebCard'
 
@@ -13,6 +13,8 @@ import App from './example/Ex04_p'
 
 // import App from './example/DarkMode'
 
+// 참참참 게임
+import App from './example/ChamGame'
 
 
 
