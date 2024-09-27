@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const MovieApi = () => {
 
@@ -21,13 +22,26 @@ const MovieApi = () => {
   useEffect(() => {
     let url = 'https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=f4372ded129bccae8b6fbe5eb13a964c&targetDt=20240901'
 
-    fetch(url)
-      .then(res => res.json())
+    // fetch(url)
+    //   .then(res => res.json())
+    //   .then(res => {
+    //     console.log(res.boxOfficeResult.weeklyBoxOfficeList);
+    //     setList(res.boxOfficeResult.weeklyBoxOfficeList)
+    //   })
+    //   .catch(err => console.error(err))
+
+    // Axios
+    // 1. npm i axios
+    // 2. import aixos from 'axios'
+    axios.get(url)
       .then(res => {
-        console.log(res.boxOfficeResult.weeklyBoxOfficeList);
-        setList(res.boxOfficeResult.weeklyBoxOfficeList)
+        console.log(res.data.boxOfficeResult.weeklyBoxOfficeList)
+        setList(res.data.boxOfficeResult.weeklyBoxOfficeList)
       })
       .catch(err => console.error(err))
+
+
+
   }, [])
 
   return (
