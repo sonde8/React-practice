@@ -17,8 +17,9 @@ import './index.css';
 // import App from './example/ChamGame'
 
 // 영화 api
-import App from './example/MovieApi'
+// import App from './example/MovieApi'
 
+import App from './example/WeatherApi'
 
 
 
