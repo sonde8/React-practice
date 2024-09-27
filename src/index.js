@@ -14,8 +14,10 @@ import './index.css';
 // import App from './example/DarkMode'
 
 // 참참참 게임
-import App from './example/ChamGame'
+// import App from './example/ChamGame'
 
+// 영화 api
+import App from './example/MovieApi'
 
 
 
