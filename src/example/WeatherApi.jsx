@@ -18,7 +18,7 @@ const WeatherApi = () => {
   }
 
   const getData = ()=>{
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d2bf379b3df4374cf6fb041773e9c785`
+    let url = ``
     
     axios.get(url)
     .then(res => {
